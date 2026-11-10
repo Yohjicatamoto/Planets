@@ -1,0 +1,28 @@
+/* Sun theme: hot reds and oranges, bold heavy type */
+
+body.sun {
+  --desktop: radial-gradient(circle at 50% 0%, #ff8c1a 0%, #c0280a 45%, #3a0700 100%) #3a0700;
+  --face: #e8d6bc;
+  --mid-light: #f6eadb;
+  --shadow: #9a7a5a;
+  --title-start: #8b0000;
+  --title-end: #ff9900;
+  --list-bg: #fffaf0;
+  --accent: #a52a00;
+  --planet: radial-gradient(circle at 40% 40%, #fff3a0, #ff8c00);
+  --display-font: Impact, "Arial Black", "Arial Narrow Bold", sans-serif;
+  background-attachment: fixed;
+}
+
+body.sun h1 {
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+.light-time {
+  font-size: 15px;
+}
+
+.light-time strong {
+  color: var(--accent);
+}

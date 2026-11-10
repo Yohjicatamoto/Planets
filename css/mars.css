@@ -1,0 +1,22 @@
+/* Mars theme: rusty red dust, terminal-style type */
+
+body.mars {
+  --desktop: #6b2511;
+  --face: #d8c2b4;
+  --mid-light: #eadbd0;
+  --shadow: #96705c;
+  --title-start: #6b1a00;
+  --title-end: #d2691e;
+  --list-bg: #fff7f2;
+  --accent: #8b2500;
+  --planet: radial-gradient(circle at 40% 40%, #f08a5d, #9b2d0f);
+  --display-font: "Lucida Console", Monaco, monospace;
+
+  /* faint diagonal dust streaks */
+  background-image: repeating-linear-gradient(135deg, #712814 0 2px, transparent 2px 12px);
+}
+
+.weight-result {
+  font-family: var(--display-font);
+  font-size: 16px;
+}

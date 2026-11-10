@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jupiter - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jupiter.css">
+</head>
+<body class="jupiter">
+
+  <div class="window">
+
+    <!-- title bar -->
+    <div class="title-bar">
+      <span class="title-text"><span class="title-icon"></span>Jupiter - Solar System Explorer</span>
+      <span class="title-buttons" aria-hidden="true"><span>_</span><span>&#9633;</span><span>&#215;</span></span>
+    </div>
+
+    <!-- navigation: links to all 10 pages -->
+    <nav class="menu-bar" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="sun.html">Sun</a>
+      <a href="moon.html">Moon</a>
+      <a href="earth.html">Earth</a>
+      <a href="mercury.html">Mercury</a>
+      <a href="venus.html">Venus</a>
+      <a href="mars.html">Mars</a>
+      <a href="jupiter.html" class="active" aria-current="page">Jupiter</a>
+      <a href="saturn.html">Saturn</a>
+      <a href="uranus.html">Uranus</a>
+    </nav>
+
+    <main class="window-body">
+      <h1>Jupiter</h1>
+      <p class="subtitle">The biggest planet in the solar system.</p>
+
+      <p>Jupiter is a gas giant made mostly of hydrogen and helium. It has no solid surface, just clouds that get thicker and hotter the deeper you go.</p>
+      <p>Its colored stripes are bands of clouds blown by powerful winds, and its Great Red Spot is a storm that has lasted for hundreds of years.</p>
+
+      <!-- pictures -->
+      <div class="figures">
+        <figure>
+          <div class="frame sunken">
+            <img src="images/jupiter-hubble.jpg" alt="Jupiter with its tan, brown and white cloud bands and the Great Red Spot">
+          </div>
+          <figcaption>Jupiter seen by the Hubble Space Telescope. (NASA/ESA)</figcaption>
+        </figure>
+        <figure>
+          <div class="frame sunken">
+            <img src="images/jupiter-spot.jpg" alt="Close-up of the Great Red Spot, a huge oval storm swirling among Jupiter's clouds">
+          </div>
+          <figcaption>The Great Red Spot photographed by Voyager 1 in 1979. (NASA)</figcaption>
+        </figure>
+      </div>
+
+      <!-- facts -->
+      <fieldset class="group">
+        <legend>Facts</legend>
+        <div class="facts-wrap sunken">
+          <table class="facts">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Order from the Sun</th>
+                <td>5th</td>
+              </tr>
+              <tr>
+                <th scope="row">Diameter</th>
+                <td>139,820 km &mdash; about 11 times wider than Earth</td>
+              </tr>
+              <tr>
+                <th scope="row">Distance from the Sun</th>
+                <td>About 778 million km</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of day</th>
+                <td>About 9 hours 56 minutes &mdash; the shortest of any planet</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of year</th>
+                <td>About 11.9 Earth years</td>
+              </tr>
+              <tr>
+                <th scope="row">Moons</th>
+                <td>More than 90 known, including Ganymede, the largest moon in the solar system</td>
+              </tr>
+              <tr>
+                <th scope="row">Mass</th>
+                <td>More than twice all the other planets put together</td>
+              </tr>
+              <tr>
+                <th scope="row">Great Red Spot</th>
+                <td>A storm wider than Earth</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- interactive part (see js/jupiter.js) -->
+      <fieldset class="group">
+        <legend>How old would you be on Jupiter?</legend>
+        <p>One trip around the Sun takes Jupiter about 11.86 Earth years. Enter your age to see your age in Jupiter years.</p>
+        <div class="controls">
+          <label for="age-input">Your age (Earth years):</label>
+          <input type="number" id="age-input" min="0" max="130" placeholder="e.g. 16">
+          <button type="button" id="age-btn">Convert</button>
+        </div>
+        <div class="output sunken" id="age-output">Enter your age and press Convert.</div>
+      </fieldset>
+    </main>
+
+    <!-- status bar -->
+    <div class="status-bar">
+      <span>Planet 5 of 8</span>
+      <span>Jupiter</span>
+    </div>
+
+  </div>
+
+  <script src="js/jupiter.js"></script>
+</body>
+</html>

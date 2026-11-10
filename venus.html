@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venus - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/venus.css">
+</head>
+<body class="venus">
+
+  <div class="window">
+
+    <!-- title bar -->
+    <div class="title-bar">
+      <span class="title-text"><span class="title-icon"></span>Venus - Solar System Explorer</span>
+      <span class="title-buttons" aria-hidden="true"><span>_</span><span>&#9633;</span><span>&#215;</span></span>
+    </div>
+
+    <!-- navigation: links to all 10 pages -->
+    <nav class="menu-bar" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="sun.html">Sun</a>
+      <a href="moon.html">Moon</a>
+      <a href="earth.html">Earth</a>
+      <a href="mercury.html">Mercury</a>
+      <a href="venus.html" class="active" aria-current="page">Venus</a>
+      <a href="mars.html">Mars</a>
+      <a href="jupiter.html">Jupiter</a>
+      <a href="saturn.html">Saturn</a>
+      <a href="uranus.html">Uranus</a>
+    </nav>
+
+    <main class="window-body">
+      <h1>Venus</h1>
+      <p class="subtitle">The hottest planet, wrapped in thick yellow clouds.</p>
+
+      <p>Venus is almost the same size as Earth, but it is a very different place. Its air is thick carbon dioxide, and its clouds are made of sulfuric acid.</p>
+      <p>That heavy atmosphere traps heat like a blanket, so Venus is even hotter than Mercury, though it is twice as far from the Sun.</p>
+
+      <!-- pictures -->
+      <div class="figures">
+        <figure>
+          <div class="frame sunken">
+            <img src="images/venus-clouds.jpg" alt="Venus as a pale, creamy yellow ball with no visible surface, covered by thick cloud">
+          </div>
+          <figcaption>Venus in natural color, covered by clouds. (NASA)</figcaption>
+        </figure>
+        <figure>
+          <div class="frame sunken">
+            <img src="images/venus-pia.jpg" alt="Venus in enhanced color showing swirling bands in its upper clouds">
+          </div>
+          <figcaption>Cloud patterns from Mariner 10 data, processed in 2020. (NASA/JPL-Caltech)</figcaption>
+        </figure>
+      </div>
+
+      <!-- facts -->
+      <fieldset class="group">
+        <legend>Facts</legend>
+        <div class="facts-wrap sunken">
+          <table class="facts">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Order from the Sun</th>
+                <td>2nd</td>
+              </tr>
+              <tr>
+                <th scope="row">Diameter</th>
+                <td>12,104 km &mdash; nearly the size of Earth</td>
+              </tr>
+              <tr>
+                <th scope="row">Distance from the Sun</th>
+                <td>About 108 million km</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of year</th>
+                <td>225 Earth days</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of day (one spin)</th>
+                <td>243 Earth days &mdash; longer than its year</td>
+              </tr>
+              <tr>
+                <th scope="row">Surface temperature</th>
+                <td>About 464 &deg;C</td>
+              </tr>
+              <tr>
+                <th scope="row">Moons</th>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">Spin direction</th>
+                <td>Backwards compared to most planets, so the Sun rises in the west</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- interactive part (see js/venus.js) -->
+      <fieldset class="group">
+        <legend>How hot is Venus?</legend>
+        <p>Compare Venus with some hot things on Earth. Choose a unit to switch every temperature.</p>
+        <div class="controls" role="radiogroup" aria-label="Temperature unit">
+          <label><input type="radio" name="unit" value="C" checked> Celsius</label>
+          <label><input type="radio" name="unit" value="F"> Fahrenheit</label>
+          <label><input type="radio" name="unit" value="K"> Kelvin</label>
+        </div>
+
+        <div class="temp-row">
+          <span>Hottest day on Earth</span>
+          <div class="bar sunken"><div class="bar-fill" data-c="57"></div></div>
+          <span class="temp-value" data-c="57"></span>
+        </div>
+        <div class="temp-row">
+          <span>Kitchen oven</span>
+          <div class="bar sunken"><div class="bar-fill" data-c="230"></div></div>
+          <span class="temp-value" data-c="230"></span>
+        </div>
+        <div class="temp-row">
+          <span>Lead melts</span>
+          <div class="bar sunken"><div class="bar-fill" data-c="327"></div></div>
+          <span class="temp-value" data-c="327"></span>
+        </div>
+        <div class="temp-row">
+          <span>Surface of Venus</span>
+          <div class="bar sunken"><div class="bar-fill" data-c="464"></div></div>
+          <span class="temp-value" data-c="464"></span>
+        </div>
+      </fieldset>
+    </main>
+
+    <!-- status bar -->
+    <div class="status-bar">
+      <span>Planet 2 of 8</span>
+      <span>Venus</span>
+    </div>
+
+  </div>
+
+  <script src="js/venus.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Moon - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/moon.css">
+</head>
+<body class="moon">
+
+  <div class="window">
+
+    <!-- title bar -->
+    <div class="title-bar">
+      <span class="title-text"><span class="title-icon"></span>The Moon - Solar System Explorer</span>
+      <span class="title-buttons" aria-hidden="true"><span>_</span><span>&#9633;</span><span>&#215;</span></span>
+    </div>
+
+    <!-- navigation: links to all 10 pages -->
+    <nav class="menu-bar" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="sun.html">Sun</a>
+      <a href="moon.html" class="active" aria-current="page">Moon</a>
+      <a href="earth.html">Earth</a>
+      <a href="mercury.html">Mercury</a>
+      <a href="venus.html">Venus</a>
+      <a href="mars.html">Mars</a>
+      <a href="jupiter.html">Jupiter</a>
+      <a href="saturn.html">Saturn</a>
+      <a href="uranus.html">Uranus</a>
+    </nav>
+
+    <main class="window-body">
+      <h1>The Moon</h1>
+      <p class="subtitle">Earth's only natural satellite.</p>
+
+      <p>The Moon is a dry, rocky world covered in craters and fine grey dust. Most scientists think it formed when a Mars-sized object crashed into the young Earth and threw rock into orbit.</p>
+      <p>Its gravity pulls on Earth's oceans and causes the tides. It is also the only other world people have walked on.</p>
+
+      <!-- pictures -->
+      <div class="figures">
+        <figure>
+          <div class="frame sunken">
+            <img src="images/moon-full.jpg" alt="The full Moon, a grey disc with dark plains and bright cratered highlands">
+          </div>
+          <figcaption>The full Moon seen from Earth.</figcaption>
+        </figure>
+        <figure>
+          <div class="frame sunken">
+            <img src="images/moon-aldrin.jpg" alt="Astronaut Buzz Aldrin in a white spacesuit standing on the grey lunar surface">
+          </div>
+          <figcaption>Buzz Aldrin on the Moon during Apollo 11, 1969. (NASA)</figcaption>
+        </figure>
+      </div>
+
+      <!-- facts -->
+      <fieldset class="group">
+        <legend>Facts</legend>
+        <div class="facts-wrap sunken">
+          <table class="facts">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Diameter</th>
+                <td>3,475 km &mdash; about a quarter of Earth's</td>
+              </tr>
+              <tr>
+                <th scope="row">Distance from Earth</th>
+                <td>About 384,400 km on average</td>
+              </tr>
+              <tr>
+                <th scope="row">Time to orbit Earth</th>
+                <td>27.3 days</td>
+              </tr>
+              <tr>
+                <th scope="row">Cycle of phases</th>
+                <td>29.5 days from new Moon to new Moon</td>
+              </tr>
+              <tr>
+                <th scope="row">Gravity</th>
+                <td>About 1/6 of Earth's (16.5%)</td>
+              </tr>
+              <tr>
+                <th scope="row">Temperature</th>
+                <td>About 127 &deg;C in sunlight to &minus;173 &deg;C at night</td>
+              </tr>
+              <tr>
+                <th scope="row">People who walked on it</th>
+                <td>12 astronauts, between 1969 and 1972</td>
+              </tr>
+              <tr>
+                <th scope="row">Rotation</th>
+                <td>Tidally locked &mdash; the same side always faces Earth</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- interactive part (see js/moon.js) -->
+      <fieldset class="group">
+        <legend>Phase viewer</legend>
+        <p>Drag the slider through one 29.5-day cycle to watch the Moon's phases change.</p>
+        <div class="phase-view">
+          <div class="sky sunken">
+            <div class="moon-disc">
+              <div class="moon-shadow" id="moon-shadow"></div>
+            </div>
+          </div>
+          <div>
+            <label for="phase-slider">Day of cycle: <span id="day-label">0</span></label><br>
+            <input type="range" id="phase-slider" min="0" max="29.5" step="0.5" value="0"><br>
+            <span class="phase-name" id="phase-name">New Moon</span>
+          </div>
+        </div>
+      </fieldset>
+    </main>
+
+    <!-- status bar -->
+    <div class="status-bar">
+      <span>Distance from Earth: 384,400 km</span>
+      <span>Moon</span>
+    </div>
+
+  </div>
+
+  <script src="js/moon.js"></script>
+</body>
+</html>

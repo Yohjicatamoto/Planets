@@ -1,0 +1,368 @@
+/* =========================================================
+   Solar System Explorer - shared styles
+   Every page is drawn as an old desktop window. Each page
+   sets its own colors and fonts with the variables below
+   (see the theme files in this folder).
+   ========================================================= */
+
+:root {
+  /* desktop + window colors (overridden by each theme) */
+  --desktop: #008080;
+  --face: #c0c0c0;
+  --light: #ffffff;
+  --mid-light: #dfdfdf;
+  --shadow: #808080;
+  --dark: #0a0a0a;
+  --title-start: #000080;
+  --title-end: #1084d0;
+  --title-text: #ffffff;
+  --list-bg: #ffffff;
+  --text: #000000;
+  --accent: #000080;
+  --planet: #888888;
+
+  /* fonts */
+  --ui-font: Tahoma, "MS Sans Serif", Geneva, Verdana, sans-serif;
+  --display-font: Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 32px 16px;
+  background: var(--desktop);
+  color: var(--text);
+  font-family: var(--ui-font);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* ---------- 3D borders used all over the page ---------- */
+
+.raised {
+  box-shadow: inset -1px -1px var(--dark), inset 1px 1px var(--light),
+    inset -2px -2px var(--shadow), inset 2px 2px var(--mid-light);
+}
+
+.sunken {
+  box-shadow: inset -1px -1px var(--light), inset 1px 1px var(--shadow),
+    inset -2px -2px var(--mid-light), inset 2px 2px var(--dark);
+}
+
+/* ---------- the main window ---------- */
+
+.window {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3px;
+  background: var(--face);
+  box-shadow: inset -1px -1px var(--dark), inset 1px 1px var(--mid-light),
+    inset -2px -2px var(--shadow), inset 2px 2px var(--light);
+}
+
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 3px 3px 3px 4px;
+  background: linear-gradient(90deg, var(--title-start), var(--title-end));
+  color: var(--title-text);
+  font-weight: bold;
+}
+
+.title-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* small round "icon" in the corner of the title bar */
+.title-icon {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--planet);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.title-buttons {
+  display: flex;
+  gap: 2px;
+  flex: none;
+}
+
+.title-buttons span {
+  width: 16px;
+  height: 14px;
+  background: var(--face);
+  color: #000;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  box-shadow: inset -1px -1px var(--dark), inset 1px 1px var(--light),
+    inset -2px -2px var(--shadow), inset 2px 2px var(--mid-light);
+}
+
+.title-buttons span:last-child {
+  margin-left: 2px;
+}
+
+/* ---------- navigation (menu bar) ---------- */
+
+.menu-bar {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px 0;
+  border-bottom: 1px solid var(--shadow);
+  box-shadow: 0 1px var(--light);
+}
+
+.menu-bar a {
+  padding: 2px 8px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.menu-bar a:hover,
+.menu-bar a:focus {
+  background: var(--title-start);
+  color: var(--title-text);
+  outline: none;
+}
+
+/* the page you are on looks "pressed in" */
+.menu-bar a.active {
+  box-shadow: inset 1px 1px var(--shadow), inset -1px -1px var(--light);
+}
+
+/* ---------- window content ---------- */
+
+.window-body {
+  padding: 16px 14px 18px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-family: var(--display-font);
+  font-size: 30px;
+  font-weight: normal;
+  color: var(--accent);
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-family: var(--display-font);
+  font-size: 17px;
+  font-weight: normal;
+  color: var(--accent);
+}
+
+.subtitle {
+  margin: 0 0 14px;
+  color: #555555;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+hr {
+  margin: 16px 0;
+  border: 0;
+  border-top: 1px solid var(--shadow);
+  border-bottom: 1px solid var(--light);
+}
+
+/* ---------- pictures ---------- */
+
+.figures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+figure {
+  margin: 0;
+}
+
+.frame {
+  padding: 4px;
+  background: #000;
+}
+
+.frame img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+figcaption {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #333;
+}
+
+/* ---------- group boxes ---------- */
+
+fieldset.group {
+  margin: 0 0 14px;
+  padding: 10px 12px 12px;
+  border: 0;
+  box-shadow: inset -1px -1px var(--light), inset 1px 1px var(--shadow),
+    inset -2px -2px var(--shadow), inset 2px 2px var(--light);
+}
+
+fieldset.group legend {
+  padding: 0 4px;
+  color: var(--text);
+}
+
+/* ---------- fact list (looks like a details list view) ---------- */
+
+.facts {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--list-bg);
+}
+
+.facts-wrap {
+  padding: 2px;
+}
+
+.facts th,
+.facts td {
+  padding: 4px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.facts thead th {
+  background: var(--face);
+  font-weight: normal;
+  box-shadow: inset -1px -1px var(--dark), inset 1px 1px var(--light),
+    inset -2px -2px var(--shadow);
+}
+
+.facts tbody th {
+  width: 36%;
+  font-weight: normal;
+  color: var(--accent);
+}
+
+.facts tbody tr + tr th,
+.facts tbody tr + tr td {
+  border-top: 1px dotted #b5b5b5;
+}
+
+/* ---------- form controls ---------- */
+
+button {
+  min-width: 75px;
+  padding: 4px 12px;
+  border: 0;
+  background: var(--face);
+  color: #000;
+  font-family: var(--ui-font);
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: inset -1px -1px var(--dark), inset 1px 1px var(--light),
+    inset -2px -2px var(--shadow), inset 2px 2px var(--mid-light);
+}
+
+button:active,
+button.pressed {
+  box-shadow: inset -1px -1px var(--light), inset 1px 1px var(--dark),
+    inset -2px -2px var(--mid-light), inset 2px 2px var(--shadow);
+}
+
+button:focus-visible {
+  outline: 1px dotted #000;
+  outline-offset: -5px;
+}
+
+button:disabled {
+  color: var(--shadow);
+  text-shadow: 1px 1px var(--light);
+  cursor: default;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  padding: 3px 4px;
+  border: 0;
+  background: #fff;
+  font-family: var(--ui-font);
+  font-size: 13px;
+  box-shadow: inset -1px -1px var(--light), inset 1px 1px var(--shadow),
+    inset -2px -2px var(--mid-light), inset 2px 2px var(--dark);
+}
+
+input[type="range"] {
+  accent-color: var(--title-start);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* sunken white box used to show results */
+.output {
+  margin-top: 10px;
+  padding: 8px 10px;
+  min-height: 36px;
+  background: #fff;
+}
+
+/* ---------- status bar ---------- */
+
+.status-bar {
+  display: flex;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.status-bar span {
+  flex: 1;
+  padding: 2px 6px;
+  font-size: 12px;
+  box-shadow: inset -1px -1px var(--light), inset 1px 1px var(--shadow);
+}
+
+.status-bar span:last-child {
+  flex: 0 0 auto;
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px 8px;
+  }
+
+  .figures {
+    grid-template-columns: 1fr;
+  }
+
+  .frame img {
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}

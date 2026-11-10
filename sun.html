@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sun - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sun.css">
+</head>
+<body class="sun">
+
+  <div class="window">
+
+    <!-- title bar -->
+    <div class="title-bar">
+      <span class="title-text"><span class="title-icon"></span>The Sun - Solar System Explorer</span>
+      <span class="title-buttons" aria-hidden="true"><span>_</span><span>&#9633;</span><span>&#215;</span></span>
+    </div>
+
+    <!-- navigation: links to all 10 pages -->
+    <nav class="menu-bar" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="sun.html" class="active" aria-current="page">Sun</a>
+      <a href="moon.html">Moon</a>
+      <a href="earth.html">Earth</a>
+      <a href="mercury.html">Mercury</a>
+      <a href="venus.html">Venus</a>
+      <a href="mars.html">Mars</a>
+      <a href="jupiter.html">Jupiter</a>
+      <a href="saturn.html">Saturn</a>
+      <a href="uranus.html">Uranus</a>
+    </nav>
+
+    <main class="window-body">
+      <h1>THE SUN</h1>
+      <p class="subtitle">The star at the center of it all.</p>
+
+      <p>The Sun is a huge, glowing ball of hot gas, mostly hydrogen and helium. Deep in its core, hydrogen is fused into helium, and that releases the energy that lights and warms every planet.</p>
+      <p>It is a fairly ordinary, middle-aged star, but to us it is everything: without it there would be no daylight, no weather and no life on Earth.</p>
+
+      <!-- pictures -->
+      <div class="figures">
+        <figure>
+          <div class="frame sunken">
+            <img src="images/sun-sdo.jpg" alt="The Sun seen in ultraviolet light, glowing orange and gold with bright active regions">
+          </div>
+          <figcaption>The Sun in ultraviolet light from the Solar Dynamics Observatory. (NASA)</figcaption>
+        </figure>
+        <figure>
+          <div class="frame sunken">
+            <img src="images/sun-flare.jpg" alt="A long, bright loop of glowing gas erupting from the edge of the Sun into space">
+          </div>
+          <figcaption>A solar eruption on August 31, 2012. (NASA)</figcaption>
+        </figure>
+      </div>
+
+      <!-- facts -->
+      <fieldset class="group">
+        <legend>Facts</legend>
+        <div class="facts-wrap sunken">
+          <table class="facts">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Type of star</th>
+                <td>Yellow dwarf (G-type main-sequence star)</td>
+              </tr>
+              <tr>
+                <th scope="row">Diameter</th>
+                <td>About 1.39 million km &mdash; 109 times wider than Earth</td>
+              </tr>
+              <tr>
+                <th scope="row">Age</th>
+                <td>About 4.6 billion years</td>
+              </tr>
+              <tr>
+                <th scope="row">Surface temperature</th>
+                <td>About 5,500 &deg;C</td>
+              </tr>
+              <tr>
+                <th scope="row">Core temperature</th>
+                <td>About 15 million &deg;C</td>
+              </tr>
+              <tr>
+                <th scope="row">Share of solar system mass</th>
+                <td>About 99.8%</td>
+              </tr>
+              <tr>
+                <th scope="row">Rotation</th>
+                <td>About 25 days at the equator, about 35 days near the poles</td>
+              </tr>
+              <tr>
+                <th scope="row">Distance from Earth</th>
+                <td>About 150 million km (1 AU)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- interactive part (see js/sun.js) -->
+      <fieldset class="group">
+        <legend>Sunlight travel time</legend>
+        <p>Light is fast, but space is big. Choose a planet to see how long sunlight takes to get there.</p>
+        <div class="controls">
+          <label for="planet-select">Planet:</label>
+          <select id="planet-select">
+            <option value="0.387">Mercury</option>
+            <option value="0.723">Venus</option>
+            <option value="1" selected>Earth</option>
+            <option value="1.524">Mars</option>
+            <option value="5.203">Jupiter</option>
+            <option value="9.537">Saturn</option>
+            <option value="19.19">Uranus</option>
+            <option value="30.07">Neptune</option>
+          </select>
+          <button type="button" id="calc-btn">Calculate</button>
+        </div>
+        <div class="output sunken light-time" id="light-output">Pick a planet and press Calculate.</div>
+      </fieldset>
+    </main>
+
+    <!-- status bar -->
+    <div class="status-bar">
+      <span>Distance to Earth: 1 AU</span>
+      <span>Star</span>
+    </div>
+
+  </div>
+
+  <script src="js/sun.js"></script>
+</body>
+</html>

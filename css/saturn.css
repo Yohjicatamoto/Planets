@@ -1,0 +1,61 @@
+/* Saturn theme: pale gold and dusk, thin rounded type */
+
+body.saturn {
+  --desktop: #2d2618;
+  --face: #ddd3bb;
+  --mid-light: #eee7d6;
+  --shadow: #968a6c;
+  --title-start: #5e4f2a;
+  --title-end: #e3d199;
+  --list-bg: #fffdf5;
+  --accent: #5e4f2a;
+  --planet: radial-gradient(circle at 40% 40%, #fbf0c8, #c9b071);
+  --display-font: "Century Gothic", "Avant Garde", "Trebuchet MS", sans-serif;
+
+  /* rings drawn on the desktop */
+  background-image:
+    radial-gradient(ellipse at 50% 50%, transparent 38%, #3a3220 38.5%, transparent 41%,
+      #352d1d 44%, transparent 47%);
+  background-attachment: fixed;
+}
+
+body.saturn h1 {
+  letter-spacing: 4px;
+  text-transform: lowercase;
+}
+
+/* ---------- tabs (like a properties dialog) ---------- */
+
+.tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  padding-left: 2px;
+}
+
+.tab-list button {
+  min-width: 0;
+  margin-right: -2px;
+  padding: 3px 12px;
+  box-shadow: inset -1px 0 var(--dark), inset 1px 1px var(--light),
+    inset -2px 0 var(--shadow), inset 2px 2px var(--mid-light);
+}
+
+/* the open tab sits a bit higher and joins the panel */
+.tab-list button.selected {
+  margin-top: -2px;
+  padding-bottom: 5px;
+  background: var(--face);
+}
+
+.tab-list button:not(.selected) {
+  margin-top: 2px;
+}
+
+.tab-panel {
+  margin-top: -2px;
+  padding: 14px 12px;
+  box-shadow: inset -1px -1px var(--dark), inset 1px 1px var(--light),
+    inset -2px -2px var(--shadow), inset 2px 2px var(--mid-light);
+}

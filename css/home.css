@@ -1,0 +1,102 @@
+/* Home page theme: a night-sky desktop with a navy window */
+
+body.home {
+  --desktop: #05060f;
+  --title-start: #000060;
+  --title-end: #3a4bb0;
+  --accent: #000060;
+  --planet: radial-gradient(circle at 35% 35%, #fff6b0, #f0a020);
+  --display-font: "Lucida Console", "Courier New", monospace;
+
+  /* a few hundred "stars" made from small dots */
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 120px, #cfd8ff, transparent),
+    radial-gradient(1px 1px at 160px 60px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 230px 170px, #fff, transparent),
+    radial-gradient(1px 1px at 300px 20px, #aab6ff, transparent),
+    radial-gradient(1px 1px at 50px 200px, #fff, transparent);
+  background-size: 320px 220px;
+}
+
+/* ---------- orbit model ---------- */
+
+.orbit-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 6px auto 12px;
+  background: #000;
+  overflow: hidden;
+}
+
+.sun-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border-radius: 50%;
+  background: #ffcc33;
+}
+
+/* each orbit is a ring that spins; the planet sits on its edge */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #2a2f55;
+  border-radius: 50%;
+  animation: spin linear infinite;
+}
+
+.orbit .dot {
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  border-radius: 50%;
+}
+
+/* sizes: width/height = orbit size, margins center it */
+.o-mercury { width: 40px;  height: 40px;  margin: -20px 0 0 -20px;  animation-duration: 2.4s; }
+.o-venus   { width: 64px;  height: 64px;  margin: -32px 0 0 -32px;  animation-duration: 6s; }
+.o-earth   { width: 90px;  height: 90px;  margin: -45px 0 0 -45px;  animation-duration: 10s; }
+.o-mars    { width: 116px; height: 116px; margin: -58px 0 0 -58px;  animation-duration: 18s; }
+.o-jupiter { width: 160px; height: 160px; margin: -80px 0 0 -80px;  animation-duration: 40s; }
+.o-saturn  { width: 200px; height: 200px; margin: -100px 0 0 -100px; animation-duration: 70s; }
+.o-uranus  { width: 240px; height: 240px; margin: -120px 0 0 -120px; animation-duration: 110s; }
+.o-neptune { width: 280px; height: 280px; margin: -140px 0 0 -140px; animation-duration: 160s; }
+
+.o-mercury .dot { background: #a9a9a9; }
+.o-venus .dot   { background: #e8cf8a; }
+.o-earth .dot   { background: #3d8bff; }
+.o-mars .dot    { background: #d0532a; }
+.o-jupiter .dot { background: #d9a066; width: 9px; height: 9px; top: -5px; margin-left: -4px; }
+.o-saturn .dot  { background: #e3d199; width: 8px; height: 8px; top: -4px; margin-left: -4px; }
+.o-uranus .dot  { background: #9de3e8; }
+.o-neptune .dot { background: #4b70dd; }
+
+/* the Stop button adds this class to pause every orbit */
+.orbit-box.paused .orbit {
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit-controls {
+  justify-content: center;
+}
+
+.page-list {
+  margin: 0;
+  padding-left: 18px;
+  columns: 2;
+}

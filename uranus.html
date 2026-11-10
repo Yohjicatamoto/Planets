@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uranus - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/uranus.css">
+</head>
+<body class="uranus">
+
+  <div class="window">
+
+    <!-- title bar -->
+    <div class="title-bar">
+      <span class="title-text"><span class="title-icon"></span>Uranus - Solar System Explorer</span>
+      <span class="title-buttons" aria-hidden="true"><span>_</span><span>&#9633;</span><span>&#215;</span></span>
+    </div>
+
+    <!-- navigation: links to all 10 pages -->
+    <nav class="menu-bar" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="sun.html">Sun</a>
+      <a href="moon.html">Moon</a>
+      <a href="earth.html">Earth</a>
+      <a href="mercury.html">Mercury</a>
+      <a href="venus.html">Venus</a>
+      <a href="mars.html">Mars</a>
+      <a href="jupiter.html">Jupiter</a>
+      <a href="saturn.html">Saturn</a>
+      <a href="uranus.html" class="active" aria-current="page">Uranus</a>
+    </nav>
+
+    <main class="window-body">
+      <h1>Uranus</h1>
+      <p class="subtitle">The ice giant that spins on its side.</p>
+
+      <p>Uranus is an ice giant. Under its hazy blue-green clouds is a thick layer of water, ammonia and methane ices around a small rocky core.</p>
+      <p>It is tipped over so far that it basically rolls around the Sun on its side, which gives it extreme seasons that last about 21 years each.</p>
+
+      <!-- pictures -->
+      <div class="figures">
+        <figure>
+          <div class="frame sunken">
+            <img src="images/uranus-voyager.jpg" alt="Uranus as a smooth, pale blue-green ball with no visible features">
+          </div>
+          <figcaption>Uranus seen by Voyager 2 in 1986. (NASA/JPL-Caltech)</figcaption>
+        </figure>
+        <figure>
+          <div class="frame sunken">
+            <img src="images/uranus-webb.png" alt="Uranus in infrared light, a glowing blue ball with a bright white polar cap, circled by thin bright rings">
+          </div>
+          <figcaption>Uranus and its rings seen by the James Webb Space Telescope in 2023. (NASA/ESA/CSA/STScI)</figcaption>
+        </figure>
+      </div>
+
+      <!-- facts -->
+      <fieldset class="group">
+        <legend>Facts</legend>
+        <div class="facts-wrap sunken">
+          <table class="facts">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Order from the Sun</th>
+                <td>7th</td>
+              </tr>
+              <tr>
+                <th scope="row">Diameter</th>
+                <td>50,724 km &mdash; about 4 times wider than Earth</td>
+              </tr>
+              <tr>
+                <th scope="row">Distance from the Sun</th>
+                <td>About 2.9 billion km</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of day</th>
+                <td>About 17 hours 14 minutes</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of year</th>
+                <td>84 Earth years</td>
+              </tr>
+              <tr>
+                <th scope="row">Axial tilt</th>
+                <td>About 98&deg; &mdash; it spins on its side</td>
+              </tr>
+              <tr>
+                <th scope="row">Coldest temperature</th>
+                <td>About &minus;224 &deg;C</td>
+              </tr>
+              <tr>
+                <th scope="row">Moons</th>
+                <td>28 known, named after characters from Shakespeare and Alexander Pope</td>
+              </tr>
+              <tr>
+                <th scope="row">Discovered</th>
+                <td>1781 by William Herschel</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- interactive part (see js/uranus.js) -->
+      <fieldset class="group">
+        <legend>Uranus quiz</legend>
+        <p>True or false? Answer all four, then check your score.</p>
+
+        <div class="question" data-answer="false">
+          <p>1. Uranus was known to ancient astronomers.</p>
+          <button type="button" data-choice="true">True</button>
+          <button type="button" data-choice="false">False</button>
+          <span class="feedback"></span>
+        </div>
+        <div class="question" data-answer="true">
+          <p>2. Uranus is tilted so far that it spins on its side.</p>
+          <button type="button" data-choice="true">True</button>
+          <button type="button" data-choice="false">False</button>
+          <span class="feedback"></span>
+        </div>
+        <div class="question" data-answer="false">
+          <p>3. Many spacecraft have visited Uranus.</p>
+          <button type="button" data-choice="true">True</button>
+          <button type="button" data-choice="false">False</button>
+          <span class="feedback"></span>
+        </div>
+        <div class="question" data-answer="true">
+          <p>4. Methane gas gives Uranus its blue-green color.</p>
+          <button type="button" data-choice="true">True</button>
+          <button type="button" data-choice="false">False</button>
+          <span class="feedback"></span>
+        </div>
+
+        <div class="controls">
+          <button type="button" id="reset-quiz">Start over</button>
+          <span class="score" id="score">Score: 0 / 4</span>
+        </div>
+      </fieldset>
+    </main>
+
+    <!-- status bar -->
+    <div class="status-bar">
+      <span>Planet 7 of 8</span>
+      <span>Uranus</span>
+    </div>
+
+  </div>
+
+  <script src="js/uranus.js"></script>
+</body>
+</html>

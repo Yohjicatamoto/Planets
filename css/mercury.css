@@ -1,0 +1,55 @@
+/* Mercury theme: scorched grey-brown rock, typewriter type */
+
+body.mercury {
+  --desktop: #4a4440;
+  --face: #c4bcb4;
+  --mid-light: #dcd6d0;
+  --shadow: #7d7268;
+  --title-start: #3b332d;
+  --title-end: #a8998b;
+  --list-bg: #f7f4f1;
+  --accent: #4a3a2e;
+  --planet: radial-gradient(circle at 40% 40%, #d6d0ca, #7a706a);
+  --display-font: "Courier New", Courier, monospace;
+
+  /* fine speckle, like a dusty surface */
+  background-image: radial-gradient(#56504b 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+
+body.mercury h1 {
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ---------- read more sections ---------- */
+
+.more-item + .more-item {
+  margin-top: 8px;
+}
+
+.more-item button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+}
+
+/* the small [+] / [-] box */
+.more-item .sign {
+  width: 11px;
+  height: 11px;
+  border: 1px solid var(--shadow);
+  background: #fff;
+  font-size: 10px;
+  line-height: 9px;
+  text-align: center;
+}
+
+.more-text {
+  margin: 6px 0 0 20px;
+  padding: 8px 10px;
+  background: var(--list-bg);
+}

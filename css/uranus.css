@@ -1,0 +1,45 @@
+/* Uranus theme: icy cyan and teal, plain clean type */
+
+body.uranus {
+  --desktop: linear-gradient(180deg, #0d3f47, #1f6f78 55%, #5fb8c0) #5fb8c0;
+  --face: #c4d8da;
+  --mid-light: #dde9ea;
+  --shadow: #6f9296;
+  --title-start: #0d4f58;
+  --title-end: #8fdbe0;
+  --list-bg: #f4fbfb;
+  --accent: #0d4f58;
+  --planet: radial-gradient(circle at 40% 40%, #e6fbfc, #6cc7cf);
+  --display-font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-attachment: fixed;
+}
+
+/* ---------- quiz ---------- */
+
+.question {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted var(--shadow);
+}
+
+.question p {
+  margin-bottom: 6px;
+}
+
+.feedback {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.feedback.right {
+  color: #006400;
+}
+
+.feedback.wrong {
+  color: #a00000;
+}
+
+.score {
+  font-family: var(--display-font);
+  font-size: 18px;
+}

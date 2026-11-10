@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mars - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mars.css">
+</head>
+<body class="mars">
+
+  <div class="window">
+
+    <!-- title bar -->
+    <div class="title-bar">
+      <span class="title-text"><span class="title-icon"></span>Mars - Solar System Explorer</span>
+      <span class="title-buttons" aria-hidden="true"><span>_</span><span>&#9633;</span><span>&#215;</span></span>
+    </div>
+
+    <!-- navigation: links to all 10 pages -->
+    <nav class="menu-bar" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="sun.html">Sun</a>
+      <a href="moon.html">Moon</a>
+      <a href="earth.html">Earth</a>
+      <a href="mercury.html">Mercury</a>
+      <a href="venus.html">Venus</a>
+      <a href="mars.html" class="active" aria-current="page">Mars</a>
+      <a href="jupiter.html">Jupiter</a>
+      <a href="saturn.html">Saturn</a>
+      <a href="uranus.html">Uranus</a>
+    </nav>
+
+    <main class="window-body">
+      <h1>Mars</h1>
+      <p class="subtitle">The red planet.</p>
+
+      <p>Mars is a cold desert world. Its red color comes from iron oxide &mdash; rust &mdash; in its rocks and dust.</p>
+      <p>Long ago it had rivers and lakes, and rovers still explore its surface today looking for signs that life may once have existed there.</p>
+
+      <!-- pictures -->
+      <div class="figures">
+        <figure>
+          <div class="frame sunken">
+            <img src="images/mars-globe.jpg" alt="Mars as a reddish-orange globe with dark markings and a white polar cap">
+          </div>
+          <figcaption>Mars in natural color, from the Rosetta spacecraft. (ESA)</figcaption>
+        </figure>
+        <figure>
+          <div class="frame sunken">
+            <img src="images/mars-valles.jpg" alt="Mars with the long dark scar of the Valles Marineris canyon across its middle">
+          </div>
+          <figcaption>Valles Marineris, a canyon over 4,000 km long. (NASA)</figcaption>
+        </figure>
+      </div>
+
+      <!-- facts -->
+      <fieldset class="group">
+        <legend>Facts</legend>
+        <div class="facts-wrap sunken">
+          <table class="facts">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Order from the Sun</th>
+                <td>4th</td>
+              </tr>
+              <tr>
+                <th scope="row">Diameter</th>
+                <td>6,779 km &mdash; about half of Earth's</td>
+              </tr>
+              <tr>
+                <th scope="row">Distance from the Sun</th>
+                <td>About 228 million km</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of day</th>
+                <td>24 hours 37 minutes</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of year</th>
+                <td>687 Earth days</td>
+              </tr>
+              <tr>
+                <th scope="row">Average temperature</th>
+                <td>About &minus;60 &deg;C</td>
+              </tr>
+              <tr>
+                <th scope="row">Moons</th>
+                <td>2 (Phobos and Deimos)</td>
+              </tr>
+              <tr>
+                <th scope="row">Tallest volcano</th>
+                <td>Olympus Mons, about 22 km high</td>
+              </tr>
+              <tr>
+                <th scope="row">Gravity</th>
+                <td>About 38% of Earth's</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- interactive part (see js/mars.js) -->
+      <fieldset class="group">
+        <legend>What would you weigh on Mars?</legend>
+        <p>Gravity on Mars is only 38% as strong as on Earth. Enter your weight to find out.</p>
+        <div class="controls">
+          <label for="weight-input">Your weight:</label>
+          <input type="number" id="weight-input" min="0" placeholder="e.g. 120">
+          <select id="weight-unit" aria-label="Unit">
+            <option value="lb">lb</option>
+            <option value="kg">kg</option>
+          </select>
+          <button type="button" id="weigh-btn">Calculate</button>
+        </div>
+        <div class="output sunken weight-result" id="weight-output">&gt; waiting for input_</div>
+      </fieldset>
+    </main>
+
+    <!-- status bar -->
+    <div class="status-bar">
+      <span>Planet 4 of 8</span>
+      <span>Mars</span>
+    </div>
+
+  </div>
+
+  <script src="js/mars.js"></script>
+</body>
+</html>
