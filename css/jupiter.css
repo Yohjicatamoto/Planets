@@ -1,0 +1,32 @@
+/* Jupiter theme: cloud bands in tan, cream and brown */
+
+body.jupiter {
+  --desktop: repeating-linear-gradient(
+    180deg,
+    #c9a27a 0 40px,
+    #e8d3b5 40px 70px,
+    #a8693f 70px 95px,
+    #d9b88f 95px 140px,
+    #8a5432 140px 155px
+  );
+  --face: #e4d4bf;
+  --mid-light: #f3e8da;
+  --shadow: #9c7f60;
+  --title-start: #6e3b1f;
+  --title-end: #d9a066;
+  --list-bg: #fffaf3;
+  --accent: #7a3f1d;
+  --planet: repeating-linear-gradient(180deg, #e8d3b5 0 3px, #b07040 3px 5px);
+  --display-font: "Trebuchet MS", "Lucida Grande", sans-serif;
+  background-attachment: fixed;
+}
+
+body.jupiter h1 {
+  font-weight: bold;
+}
+
+.age-big {
+  font-family: var(--display-font);
+  font-size: 22px;
+  color: var(--accent);
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earth - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/earth.css">
+</head>
+<body class="earth">
+
+  <div class="window">
+
+    <!-- title bar -->
+    <div class="title-bar">
+      <span class="title-text"><span class="title-icon"></span>Earth - Solar System Explorer</span>
+      <span class="title-buttons" aria-hidden="true"><span>_</span><span>&#9633;</span><span>&#215;</span></span>
+    </div>
+
+    <!-- navigation: links to all 10 pages -->
+    <nav class="menu-bar" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="sun.html">Sun</a>
+      <a href="moon.html">Moon</a>
+      <a href="earth.html" class="active" aria-current="page">Earth</a>
+      <a href="mercury.html">Mercury</a>
+      <a href="venus.html">Venus</a>
+      <a href="mars.html">Mars</a>
+      <a href="jupiter.html">Jupiter</a>
+      <a href="saturn.html">Saturn</a>
+      <a href="uranus.html">Uranus</a>
+    </nav>
+
+    <main class="window-body">
+      <h1>Earth</h1>
+      <p class="subtitle">The third planet from the Sun, and our home.</p>
+
+      <p>Earth is the only place we know of where life exists. It sits at just the right distance from the Sun for liquid water to stay on its surface, and its atmosphere keeps the temperature steady and blocks harmful radiation.</p>
+      <p>Seen from space, it is a blue planet with white swirls of cloud, brown and green continents, and white ice at the poles.</p>
+
+      <!-- pictures -->
+      <div class="figures">
+        <figure>
+          <div class="frame sunken">
+            <img src="images/earth-apollo17.jpg" alt="The whole Earth seen from space, showing Africa, blue oceans, white clouds and the Antarctic ice cap">
+          </div>
+          <figcaption>"The Blue Marble", taken by the Apollo 17 crew in 1972. (NASA)</figcaption>
+        </figure>
+        <figure>
+          <div class="frame sunken">
+            <img src="images/earth-earthrise.jpg" alt="Earth rising over the grey horizon of the Moon, half lit against black space">
+          </div>
+          <figcaption>"Earthrise", taken from lunar orbit by Apollo 8 in 1968. (NASA)</figcaption>
+        </figure>
+      </div>
+
+      <!-- facts -->
+      <fieldset class="group">
+        <legend>Facts</legend>
+        <div class="facts-wrap sunken">
+          <table class="facts">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Order from the Sun</th>
+                <td>3rd</td>
+              </tr>
+              <tr>
+                <th scope="row">Diameter</th>
+                <td>12,742 km</td>
+              </tr>
+              <tr>
+                <th scope="row">Distance from the Sun</th>
+                <td>About 149.6 million km</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of day</th>
+                <td>About 24 hours</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of year</th>
+                <td>365.25 days</td>
+              </tr>
+              <tr>
+                <th scope="row">Surface covered by water</th>
+                <td>About 71%</td>
+              </tr>
+              <tr>
+                <th scope="row">Average temperature</th>
+                <td>About 15 &deg;C</td>
+              </tr>
+              <tr>
+                <th scope="row">Moons</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">Air</th>
+                <td>About 78% nitrogen and 21% oxygen</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- interactive part (see js/earth.js) -->
+      <fieldset class="group">
+        <legend>Fun facts</legend>
+        <p>Open the message box to read some surprising facts about Earth.</p>
+        <button type="button" id="open-facts">Show fun facts...</button>
+      </fieldset>
+
+      <!-- pop-up message box (hidden until the button is pressed) -->
+      <div class="overlay" id="facts-overlay" hidden>
+        <div class="window dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+          <div class="title-bar">
+            <span class="title-text" id="dialog-title">Did you know?</span>
+            <span class="title-buttons"><span id="close-x" role="button" tabindex="0" aria-label="Close">&#215;</span></span>
+          </div>
+          <div class="dialog-body">
+            <div class="info-icon" aria-hidden="true">i</div>
+            <div>
+              <p id="fact-text"></p>
+              <span class="fact-count" id="fact-count"></span>
+            </div>
+          </div>
+          <div class="dialog-buttons">
+            <button type="button" id="next-fact">Next fact</button>
+            <button type="button" id="close-facts">OK</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- status bar -->
+    <div class="status-bar">
+      <span>Planet 3 of 8</span>
+      <span>Earth</span>
+    </div>
+
+  </div>
+
+  <script src="js/earth.js"></script>
+</body>
+</html>

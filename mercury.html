@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercury - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mercury.css">
+</head>
+<body class="mercury">
+
+  <div class="window">
+
+    <!-- title bar -->
+    <div class="title-bar">
+      <span class="title-text"><span class="title-icon"></span>Mercury - Solar System Explorer</span>
+      <span class="title-buttons" aria-hidden="true"><span>_</span><span>&#9633;</span><span>&#215;</span></span>
+    </div>
+
+    <!-- navigation: links to all 10 pages -->
+    <nav class="menu-bar" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="sun.html">Sun</a>
+      <a href="moon.html">Moon</a>
+      <a href="earth.html">Earth</a>
+      <a href="mercury.html" class="active" aria-current="page">Mercury</a>
+      <a href="venus.html">Venus</a>
+      <a href="mars.html">Mars</a>
+      <a href="jupiter.html">Jupiter</a>
+      <a href="saturn.html">Saturn</a>
+      <a href="uranus.html">Uranus</a>
+    </nav>
+
+    <main class="window-body">
+      <h1>Mercury</h1>
+      <p class="subtitle">The smallest planet and the closest to the Sun.</p>
+
+      <p>Mercury is a small, grey, heavily cratered world that looks a lot like our Moon. It races around the Sun faster than any other planet.</p>
+      <p>It has almost no atmosphere to trap heat, so its days are scorching and its nights are freezing.</p>
+
+      <!-- pictures -->
+      <div class="figures">
+        <figure>
+          <div class="frame sunken">
+            <img src="images/mercury-true.jpg" alt="Mercury in natural color, a grey globe covered in craters">
+          </div>
+          <figcaption>Mercury in natural color, from the MESSENGER spacecraft. (NASA)</figcaption>
+        </figure>
+        <figure>
+          <div class="frame sunken">
+            <img src="images/mercury-color.jpg" alt="Mercury in enhanced color, showing patches of tan, blue and orange across its cratered surface">
+          </div>
+          <figcaption>Enhanced color shows different kinds of rock. (NASA)</figcaption>
+        </figure>
+      </div>
+
+      <!-- facts -->
+      <fieldset class="group">
+        <legend>Facts</legend>
+        <div class="facts-wrap sunken">
+          <table class="facts">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Order from the Sun</th>
+                <td>1st</td>
+              </tr>
+              <tr>
+                <th scope="row">Diameter</th>
+                <td>4,879 km &mdash; the smallest planet</td>
+              </tr>
+              <tr>
+                <th scope="row">Distance from the Sun</th>
+                <td>About 58 million km</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of year</th>
+                <td>88 Earth days</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of day (sunrise to sunrise)</th>
+                <td>176 Earth days</td>
+              </tr>
+              <tr>
+                <th scope="row">Temperature</th>
+                <td>About 430 &deg;C by day, &minus;180 &deg;C at night</td>
+              </tr>
+              <tr>
+                <th scope="row">Moons</th>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- interactive part (see js/mercury.js) -->
+      <fieldset class="group">
+        <legend>Read more</legend>
+        <p>Click a topic to open or close it.</p>
+
+        <div class="more-item">
+          <button type="button" class="more-btn" aria-expanded="false" aria-controls="more-1">
+            <span class="sign" aria-hidden="true">+</span>A very long day
+          </button>
+          <div class="more-text sunken" id="more-1" hidden>
+            Mercury spins slowly while it moves quickly around the Sun. Because of this, one full day from sunrise to sunrise lasts 176 Earth days &mdash; two of Mercury's years.
+          </div>
+        </div>
+
+        <div class="more-item">
+          <button type="button" class="more-btn" aria-expanded="false" aria-controls="more-2">
+            <span class="sign" aria-hidden="true">+</span>A giant iron core
+          </button>
+          <div class="more-text sunken" id="more-2" hidden>
+            Mercury's metal core takes up about 85% of the planet's radius. That makes it the second densest planet after Earth.
+          </div>
+        </div>
+
+        <div class="more-item">
+          <button type="button" class="more-btn" aria-expanded="false" aria-controls="more-3">
+            <span class="sign" aria-hidden="true">+</span>Ice near the Sun
+          </button>
+          <div class="more-text sunken" id="more-3" hidden>
+            Even this close to the Sun, there is water ice. It hides in deep craters near the poles that never get any sunlight.
+          </div>
+        </div>
+
+        <div class="more-item">
+          <button type="button" class="more-btn" aria-expanded="false" aria-controls="more-4">
+            <span class="sign" aria-hidden="true">+</span>Spacecraft visits
+          </button>
+          <div class="more-text sunken" id="more-4" hidden>
+            Only a few missions have gone to Mercury: Mariner 10 in 1974&ndash;75, MESSENGER, which orbited from 2011 to 2015, and the European-Japanese BepiColombo.
+          </div>
+        </div>
+      </fieldset>
+    </main>
+
+    <!-- status bar -->
+    <div class="status-bar">
+      <span>Planet 1 of 8</span>
+      <span>Mercury</span>
+    </div>
+
+  </div>
+
+  <script src="js/mercury.js"></script>
+</body>
+</html>

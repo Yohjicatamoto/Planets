@@ -1,0 +1,53 @@
+/* Venus theme: thick yellow clouds, warm serif type */
+
+body.venus {
+  --desktop: linear-gradient(170deg, #b08a2e, #7a5a14 60%, #4a3508) #4a3508;
+  --face: #e2d6b0;
+  --mid-light: #f2ead0;
+  --shadow: #9c8a55;
+  --title-start: #7a5a00;
+  --title-end: #e8c75a;
+  --list-bg: #fffbea;
+  --accent: #6b4e00;
+  --planet: radial-gradient(circle at 40% 40%, #fff2c4, #d4a83a);
+  --display-font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  background-attachment: fixed;
+}
+
+/* ---------- temperature bars ---------- */
+
+.temp-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 90px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* chunky block progress bar */
+.bar {
+  height: 20px;
+  padding: 3px;
+  background: #fff;
+}
+
+.bar-fill {
+  height: 100%;
+  background: repeating-linear-gradient(90deg, #b8860b 0 9px, transparent 9px 11px);
+}
+
+.temp-value {
+  text-align: right;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .temp-row {
+    grid-template-columns: 1fr 80px;
+  }
+
+  .temp-row .bar {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}

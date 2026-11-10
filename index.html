@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body class="home">
+
+  <div class="window">
+
+    <!-- title bar -->
+    <div class="title-bar">
+      <span class="title-text"><span class="title-icon"></span>Solar System Explorer</span>
+      <span class="title-buttons" aria-hidden="true"><span>_</span><span>&#9633;</span><span>&#215;</span></span>
+    </div>
+
+    <!-- navigation: links to all 10 pages -->
+    <nav class="menu-bar" aria-label="Main">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="sun.html">Sun</a>
+      <a href="moon.html">Moon</a>
+      <a href="earth.html">Earth</a>
+      <a href="mercury.html">Mercury</a>
+      <a href="venus.html">Venus</a>
+      <a href="mars.html">Mars</a>
+      <a href="jupiter.html">Jupiter</a>
+      <a href="saturn.html">Saturn</a>
+      <a href="uranus.html">Uranus</a>
+    </nav>
+
+    <main class="window-body">
+      <h1>Solar System Explorer</h1>
+      <p class="subtitle">A tour of the Sun, the Moon and seven planets.</p>
+
+      <p>Our solar system formed about 4.6 billion years ago from a spinning cloud of gas and dust. At its center is the Sun, a star that holds everything else in orbit with its gravity.</p>
+      <p>Eight planets travel around the Sun. The four inner planets &mdash; Mercury, Venus, Earth and Mars &mdash; are small and rocky. The four outer planets &mdash; Jupiter, Saturn, Uranus and Neptune &mdash; are giants made mostly of gas and ice. Along with them are dwarf planets like Pluto, hundreds of moons, and countless asteroids and comets.</p>
+      <p>Use the menu bar above to visit each page. Every page has its own look and something to try.</p>
+
+      <!-- pictures -->
+      <div class="figures">
+        <figure>
+          <div class="frame sunken">
+            <img src="images/solar-system.jpg" alt="The Sun at the center with the planets on their orbit paths around it">
+          </div>
+          <figcaption>The Sun and planets on their orbits, not to scale. (NASA)</figcaption>
+        </figure>
+        <figure>
+          <div class="frame sunken">
+            <img src="images/planets-lineup.png" alt="The eight planets shown side by side at their correct sizes compared to each other">
+          </div>
+          <figcaption>The planets at their correct relative sizes. (NASA / Wikimedia Commons)</figcaption>
+        </figure>
+      </div>
+
+      <!-- facts -->
+      <fieldset class="group">
+        <legend>Facts</legend>
+        <div class="facts-wrap sunken">
+          <table class="facts">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Age</th>
+                <td>About 4.6 billion years</td>
+              </tr>
+              <tr>
+                <th scope="row">Planets</th>
+                <td>8 (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune)</td>
+              </tr>
+              <tr>
+                <th scope="row">Mass in the Sun</th>
+                <td>About 99.8% of all the mass in the solar system</td>
+              </tr>
+              <tr>
+                <th scope="row">Largest planet</th>
+                <td>Jupiter</td>
+              </tr>
+              <tr>
+                <th scope="row">Smallest planet</th>
+                <td>Mercury</td>
+              </tr>
+              <tr>
+                <th scope="row">Known dwarf planets</th>
+                <td>5 recognized, including Pluto and Ceres</td>
+              </tr>
+              <tr>
+                <th scope="row">Location</th>
+                <td>One of the outer arms of the Milky Way galaxy</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- interactive part (see js/home.js) -->
+      <fieldset class="group">
+        <legend>Orbit model</legend>
+        <p>The planets in their orbits, sped up a lot. Inner planets move fastest.</p>
+        <div class="orbit-box sunken" id="orbit-box">
+          <div class="sun-dot"></div>
+          <div class="orbit o-mercury"><span class="dot"></span></div>
+          <div class="orbit o-venus"><span class="dot"></span></div>
+          <div class="orbit o-earth"><span class="dot"></span></div>
+          <div class="orbit o-mars"><span class="dot"></span></div>
+          <div class="orbit o-jupiter"><span class="dot"></span></div>
+          <div class="orbit o-saturn"><span class="dot"></span></div>
+          <div class="orbit o-uranus"><span class="dot"></span></div>
+          <div class="orbit o-neptune"><span class="dot"></span></div>
+        </div>
+        <div class="controls orbit-controls">
+          <button type="button" id="start-btn" disabled>Start</button>
+          <button type="button" id="stop-btn">Stop</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend>Pages</legend>
+        <ul class="page-list">
+          <li><a href="sun.html">The Sun</a></li>
+          <li><a href="moon.html">The Moon</a></li>
+          <li><a href="earth.html">Earth</a></li>
+          <li><a href="mercury.html">Mercury</a></li>
+          <li><a href="venus.html">Venus</a></li>
+          <li><a href="mars.html">Mars</a></li>
+          <li><a href="jupiter.html">Jupiter</a></li>
+          <li><a href="saturn.html">Saturn</a></li>
+          <li><a href="uranus.html">Uranus</a></li>
+        </ul>
+      </fieldset>
+    </main>
+
+    <!-- status bar -->
+    <div class="status-bar">
+      <span>10 pages</span>
+      <span>Home</span>
+    </div>
+
+  </div>
+
+  <script src="js/home.js"></script>
+</body>
+</html>

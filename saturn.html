@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saturn - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/saturn.css">
+</head>
+<body class="saturn">
+
+  <div class="window">
+
+    <!-- title bar -->
+    <div class="title-bar">
+      <span class="title-text"><span class="title-icon"></span>Saturn - Solar System Explorer</span>
+      <span class="title-buttons" aria-hidden="true"><span>_</span><span>&#9633;</span><span>&#215;</span></span>
+    </div>
+
+    <!-- navigation: links to all 10 pages -->
+    <nav class="menu-bar" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="sun.html">Sun</a>
+      <a href="moon.html">Moon</a>
+      <a href="earth.html">Earth</a>
+      <a href="mercury.html">Mercury</a>
+      <a href="venus.html">Venus</a>
+      <a href="mars.html">Mars</a>
+      <a href="jupiter.html">Jupiter</a>
+      <a href="saturn.html" class="active" aria-current="page">Saturn</a>
+      <a href="uranus.html">Uranus</a>
+    </nav>
+
+    <main class="window-body">
+      <h1>Saturn</h1>
+      <p class="subtitle">The planet with the brightest rings.</p>
+
+      <p>Saturn is the second largest planet. Like Jupiter, it is a gas giant made mostly of hydrogen and helium, with pale gold cloud bands.</p>
+      <p>Its famous rings are made of billions of pieces of ice and rock, from tiny grains to chunks as big as a house.</p>
+
+      <!-- pictures -->
+      <div class="figures">
+        <figure>
+          <div class="frame sunken">
+            <img src="images/saturn-equinox.jpg" alt="Saturn and its rings seen nearly edge-on, with the rings casting a thin shadow across the planet">
+          </div>
+          <figcaption>Saturn at equinox, photographed by Cassini in 2009. (NASA)</figcaption>
+        </figure>
+        <figure>
+          <div class="frame sunken">
+            <img src="images/saturn-cassini.jpg" alt="Saturn in natural color with its wide rings tilted toward the viewer">
+          </div>
+          <figcaption>Saturn from the Cassini orbiter, 2004. (NASA)</figcaption>
+        </figure>
+      </div>
+
+      <!-- facts -->
+      <fieldset class="group">
+        <legend>Facts</legend>
+        <div class="facts-wrap sunken">
+          <table class="facts">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Order from the Sun</th>
+                <td>6th</td>
+              </tr>
+              <tr>
+                <th scope="row">Diameter</th>
+                <td>116,460 km &mdash; about 9 times wider than Earth</td>
+              </tr>
+              <tr>
+                <th scope="row">Distance from the Sun</th>
+                <td>About 1.4 billion km</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of day</th>
+                <td>About 10 hours 33 minutes</td>
+              </tr>
+              <tr>
+                <th scope="row">Length of year</th>
+                <td>About 29.4 Earth years</td>
+              </tr>
+              <tr>
+                <th scope="row">Moons</th>
+                <td>Over 270 known &mdash; more than any other planet</td>
+              </tr>
+              <tr>
+                <th scope="row">Density</th>
+                <td>Less dense than water</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- interactive part (see js/saturn.js) -->
+      <fieldset class="group">
+        <legend>Saturn properties</legend>
+        <div class="tab-list" role="tablist">
+          <button type="button" role="tab" class="selected" aria-selected="true" data-tab="tab-rings">Rings</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="tab-titan">Titan</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="tab-hexagon">Hexagon</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="tab-cassini">Cassini</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="tab-rings">
+          The main rings stretch about 280,000 km across, but in most places they are only about 10 meters thick. They are mostly water ice, which is why they shine so brightly.
+        </div>
+        <div class="tab-panel" role="tabpanel" id="tab-titan" hidden>
+          Titan is Saturn's largest moon and is bigger than the planet Mercury. It is the only moon with a thick atmosphere, and it has lakes of liquid methane and ethane.
+        </div>
+        <div class="tab-panel" role="tabpanel" id="tab-hexagon" hidden>
+          At Saturn's north pole, a jet stream forms a giant six-sided shape. Each side of the hexagon is wider than Earth.
+        </div>
+        <div class="tab-panel" role="tabpanel" id="tab-cassini" hidden>
+          The Cassini spacecraft orbited Saturn from 2004 to 2017. At the end of its mission it was sent diving into Saturn's atmosphere on purpose.
+        </div>
+      </fieldset>
+    </main>
+
+    <!-- status bar -->
+    <div class="status-bar">
+      <span>Planet 6 of 8</span>
+      <span>Saturn</span>
+    </div>
+
+  </div>
+
+  <script src="js/saturn.js"></script>
+</body>
+</html>
